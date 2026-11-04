@@ -9,7 +9,7 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
     
-    int i = 0, r = 0, t = 1, pa = 0;
+    int i = 0, r = 0, t = 1;
 
     cout << "Início: ";
     cin >> i;
@@ -18,14 +18,13 @@ int main() {
     cout << "Termo: ";
     cin >> t;
 
-    for(int x = t; x >= 1; x--){
-        pa += i * r;
-        i--;
-        
-        cout << pa << endl;
+    for(int x = 1; x < t; x++){
+        cout << i << endl;
+
+        i += r;
     }
 
-    cout << "\nResultado: " << pa;
+    cout << i;
     
     cin.ignore();
     getchar();
